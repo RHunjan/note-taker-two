@@ -6,8 +6,12 @@
       "id": "1"
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     
 =======
+=======
+
+>>>>>>> d4f0b6551115a415e4354db6a142f541b4c639e5
     {
       "title": "A new Note",
       "text": "This is another new note",
@@ -18,6 +22,12 @@
       "text": "444",
       "id": "Vabm6OexR"
     }
+<<<<<<< HEAD
 >>>>>>> feature/api
+=======
+
+    
+
+>>>>>>> d4f0b6551115a415e4354db6a142f541b4c639e5
   ]
 }
