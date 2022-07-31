@@ -45,14 +45,6 @@ app.post('/api/notes', (req, res) => {
 //----------------------------------------------------------------------------------------------------------
 //html routes
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> feature/api
-=======
->>>>>>> d4f0b6551115a415e4354db6a142f541b4c639e5
 app.get('/notes', (req, res) => {
       res.sendFile(path.join(__dirname, './public/notes.html'));
 });

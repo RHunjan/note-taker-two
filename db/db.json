@@ -5,13 +5,6 @@
       "text": "Second attempt at bootcamp challenge eleven ",
       "id": "1"
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    
-=======
-=======
-
->>>>>>> d4f0b6551115a415e4354db6a142f541b4c639e5
     {
       "title": "A new Note",
       "text": "This is another new note",
@@ -21,13 +14,11 @@
       "title": "Add new ntoe ",
       "text": "444",
       "id": "Vabm6OexR"
+    },
+    {
+      "title": "fourth note",
+      "text": "ss",
+      "id": "IixPgjLOI"
     }
-<<<<<<< HEAD
->>>>>>> feature/api
-=======
-
-    
-
->>>>>>> d4f0b6551115a415e4354db6a142f541b4c639e5
   ]
 }
