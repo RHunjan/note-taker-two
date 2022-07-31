@@ -1,8 +1,9 @@
 const express = require('express');
 const {notesArray} = require('./db/db');
 const shortid = require('shortid');
-
-console.log(shortid());
+const fs = require('fs');
+const path = require('path');
+ 
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -21,18 +22,36 @@ app.get('/api/notes', (req, res) => {
 
 //function to create new note
 function createNewNote(body,notesArray){
-    console.log(body);
-
+    const addNote = body;
+    notesArray.push(body);
+        fs.writeFileSync(
+        path.join(__dirname, './db/db.json'),
+        JSON.stringify({notesArray }, null, 2)
+  );
     return body;
 }
+
 
 //post route
 app.post('/api/notes', (req, res) => {
    // req.body is where our incoming content will be
-  console.log(req.body);
-  res.json(req.body);
+   req.body.id = shortid();
+
+   const newNote = createNewNote(req.body, notesArray);
+   res.json(newNote);
+   
 });
 
+//----------------------------------------------------------------------------------------------------------
+//html routes
+
+app.get('*', (req, res) => {
+     res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+app.get('/notes', (req, res) => {
+      res.sendFile(path.join(__dirname, './public/notes.html'));
+});
 
 //----------------------------------------------------------------------------------------------------------
 app.listen(PORT, () => {
